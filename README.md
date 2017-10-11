@@ -133,3 +133,25 @@ php artisan make:model Post -m
 php artisan make:controller RegistrationController -r
 php artisan make:controller SessionController -r
 php artisan make:controller PostsController -r
+
+ App\Comment can also be written as Comment::class
+ <br>
+/*
+<br>
+Tinker commands:
+<br>
+App\User::all();
+<br>
+App\User::count();
+<br>
+$user = App\User::find(1);
+<br>
+$user->delete();
+<br>
+$query = \DB::table('users')
+<br>
+$query = $query->where('name', 'Me')
+<br>
+$query->get(); 
+<br>
+*/
