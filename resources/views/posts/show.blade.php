@@ -43,8 +43,7 @@
 			<form method="post" action="/posts/{{$posted_id->id}}/comments">
 				{{ csrf_field() }}
 			  <div class="form-group">
-				<textarea name="body" id="body" placeholder="Your comment here." class="form-control">
-				</textarea>
+				<textarea name="body" id="body" placeholder="Your comment here." class="form-control" required></textarea>
 			  </div>
 			  
 			   <div class="form-group">

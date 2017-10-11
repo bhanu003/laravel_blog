@@ -22,3 +22,7 @@ Route::get('/posts/{posted_id}','PostsController@show');
 //Route::get('/posts/{posted_id}','PostsController@addComment');
 
 Route::post('/posts/{posted_id}/comments','CommentsController@store');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
