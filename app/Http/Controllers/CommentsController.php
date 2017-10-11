@@ -35,9 +35,17 @@ class CommentsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Post $posted_id)
     {
-        //
+        $this->validate(request(), ['body' => 'required:min:2']);
+		$posted_id->addComment(request('body'));
+		return back();
+		
+    /*   Comment::create([
+		'body'=>request('body'),
+		'post_id'=>$posted_id->id
+	  ]);
+	  return back(); */
     }
 
     /**
@@ -46,20 +54,9 @@ class CommentsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $posted_id)
+    public function show()
     {
-		/* $this->validate(request(), ['body' => 'required:min:2']);
-		$post->addComment(request('body'));
-		return back(); */
-		
-    /*   Comment::create([
-		'body'=>request('body'),
-		'post_id'=>$posted_id->id
-	  ]);
-	  
-	  return back(); */
-	   $posted_id->addComment(request('body'));
-		return back();
+		//
     }
 
     /**

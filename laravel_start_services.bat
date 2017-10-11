@@ -25,7 +25,7 @@ ECHO Starting Laravel
 ECHO Changing Directory
 d:
 ECHO Please wait while Running Commands
-cd D:/xampp/htdocs/bhanu/laravel/blog
+cd D:/xampp/htdocs/bhanu/laravel/larave_blog
 ECHO Checking Laravel Version
 php artisan --version
 start cmd /k  ECHO Changing Directory in New Command Window
