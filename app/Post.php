@@ -15,6 +15,13 @@ class Post extends Model
 		return $this->hasMany(Comment::class)->latest();;
 	}
 	
+	public function user(){
+		
+		//$post->user->name
+		
+		return $this->belongsTo(User::class);
+	}
+	
 	public function addComment($body){
 	/* 	Comment::create([
 		'body'=>$body,
@@ -23,4 +30,6 @@ class Post extends Model
 		
 		$this->comments()->create(compact('body'));
 	}
+	
+	
 }
